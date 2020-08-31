@@ -30,7 +30,7 @@ const Landing = () => {
   return (
     <section className="area">
       <canvas id="bg" ref={canvasEl}></canvas>
-      <img className="logo" src="/logo-white.png" />
+      <img className="logo" src="/logo-white.png" alt="logo" />
 
       <div className="container">
         <a
