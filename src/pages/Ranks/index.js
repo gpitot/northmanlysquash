@@ -11,7 +11,7 @@ const Ranks = () => (
       <th>Loss</th>
     </tr>
     {ranks.map(([name, win, loss], idx) => (
-      <tr key={idx}>
+      <tr key={idx + 1}>
         <td>{idx}</td>
         <td>{name}</td>
         <td>{win}</td>
