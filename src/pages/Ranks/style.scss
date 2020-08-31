@@ -1,0 +1,25 @@
+
+$blue: #1f4689;
+
+.ranks {
+    width:500px;
+    max-width:100%;
+    margin-top:24px;
+
+    td {
+        padding:16px;
+        text-align : center;
+    }
+
+    th {
+        padding:8px;
+    }
+
+    tr {
+        background: white;
+
+        &:nth-child(odd) td {
+            color:$blue;
+        }
+    }
+}

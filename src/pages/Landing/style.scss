@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+$blue: #1f4689;
+$red: #c43f51;
+$white : #f9f9f9;
+
+.area {
+  min-height: 100vh;
+  width: 100%;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  // font-family: "Anton", sans-serif;
+  font-family: 'Russo One', sans-serif;
+
+  @media (max-width:850px) {
+      flex-direction: column;
+  }
+
+  #bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  .logo {
+    width: 200px;
+    height: auto;
+    flex-shrink:0;
+    margin-left:40px;
+    margin-top:40px;
+    align-self:flex-start;
+
+    @media (max-width:1300px) {
+        margin:40px;
+        max-width:calc(100% - 80px);
+    }
+  }
+
+  .container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 1400px;
+    max-width:100%;
+
+    @media (max-width:1300px) {
+        width:auto;
+    }
+
+    @media (max-width:850px) {
+        padding-bottom: 50px;
+    }
+  }
+
+  .box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-grow: 1;
+    max-width:100%;
+    background: $white;
+    margin: 25px;
+    box-shadow: 0px 2px 3px 4px rgba(83, 78, 78, 0.32);
+    padding: 25px;
+    color: $red;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: transform 300ms ease;
+    cursor: pointer;
+
+    @media (max-width:1300px) {
+        margin:10px;
+    }
+
+    h1 {
+      font-size: 1.6rem;
+      text-align: center;
+      margin:0;
+    }
+    h5 {
+        margin:0;
+        font-size:1.5rem;
+    }
+  }
+}
