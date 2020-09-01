@@ -8,6 +8,7 @@ export default [
   ["Mark", 0, 0],
   ["Smiffy", 0, 0],
   ["Gil", 0, 0],
+  ["Pete", 0, 0],
   ["Jim", 0, 0],
   ["Sebastian", 0, 0],
   ["Guy", 0, 0],

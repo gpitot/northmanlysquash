@@ -39,27 +39,21 @@ const Landing = () => {
             href="http://www.tennisvenues.com.au/booking/warringah-recreation-centre-squash"
           >
             <h1>Book a court</h1>
-            {/* <h5>$17.50</h5>
-          <h5>7-10pm</h5> */}
           </a>
           <a
             className="box red margin"
             href="https://www.facebook.com/groups/427687110671206"
           >
             <h1>Follow us on Facebook</h1>
-            {/* <h5>$17.50</h5>
-          <h5>7-10pm</h5> */}
           </a>
 
           <a
-            className="box rank-box margin"
-            href="https://www.facebook.com/groups/427687110671206"
+            className="box red margin"
+            href="https://goo.gl/maps/mpx5FTxA9Gx6taEA6"
           >
-            <h1>Ladder rankings</h1>
-            <Ranks />
+            <h5>4 Kentwell Rd, North Manly NSW 2100</h5>
           </a>
-        </div>
-        <div>
+
           <div
             className="box margin"
             href="https://forms.gle/yoUpRaYPc8mnvMBG6"
@@ -89,39 +83,39 @@ const Landing = () => {
             />
           </div>
         </div>
-        <div>
-          <div
-            className="box margin"
-            href="https://forms.gle/yoUpRaYPc8mnvMBG6"
-          >
-            <h1>Challenge someone</h1>
-            <Form
-              url="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdZGiuxlFoJ9wstQXQNUJrlfY1IXGRgmIsTemN6TVuHFJATTA/formResponse"
-              submitText={"Challenge"}
-              fields={[
-                {
-                  id: "entry.239854278",
-                  name: "challenger",
-                  label: "Your name",
-                },
-                {
-                  id: "entry.891488740",
-                  name: "contact",
-                  label: "Phone number",
-                },
-                {
-                  id: "entry.1262188678",
-                  name: "opponent",
-                  label: "Opponent's name",
-                },
-                {
-                  id: "entry.1965906427",
-                  name: "availability",
-                },
-              ]}
-              submittedText="Opponent challenged"
-            />
-          </div>
+        <div className="box rank-box margin">
+          <h1>Ladder rankings</h1>
+          <Ranks />
+        </div>
+
+        <div className="box margin" href="https://forms.gle/yoUpRaYPc8mnvMBG6">
+          <h1>Challenge someone</h1>
+          <Form
+            url="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdZGiuxlFoJ9wstQXQNUJrlfY1IXGRgmIsTemN6TVuHFJATTA/formResponse"
+            submitText={"Challenge"}
+            fields={[
+              {
+                id: "entry.239854278",
+                name: "challenger",
+                label: "Your name",
+              },
+              {
+                id: "entry.891488740",
+                name: "contact",
+                label: "Phone number",
+              },
+              {
+                id: "entry.1262188678",
+                name: "opponent",
+                label: "Opponent's name",
+              },
+              {
+                id: "entry.1965906427",
+                name: "availability",
+              },
+            ]}
+            submittedText="Opponent challenged"
+          />
         </div>
       </div>
     </section>
