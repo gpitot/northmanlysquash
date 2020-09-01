@@ -33,14 +33,33 @@ const Landing = () => {
       <img className="logo" src="/logo-white.png" alt="logo" />
 
       <div className="container">
-        <a
-          className="box"
-          href="http://www.tennisvenues.com.au/booking/warringah-recreation-centre-squash"
-        >
-          <h1>Book a court</h1>
-          {/* <h5>$17.50</h5>
+        <div>
+          <a
+            className="box red"
+            href="http://www.tennisvenues.com.au/booking/warringah-recreation-centre-squash"
+          >
+            <h1>Book a court</h1>
+            {/* <h5>$17.50</h5>
           <h5>7-10pm</h5> */}
+          </a>
+          <a
+            className="box red"
+            href="https://www.facebook.com/groups/427687110671206"
+          >
+            <h1>Follow us on Facebook</h1>
+            {/* <h5>$17.50</h5>
+          <h5>7-10pm</h5> */}
+          </a>
+
+          <a
+          className="box rank-box"
+          href="https://www.facebook.com/groups/427687110671206"
+        >
+          <h1>Ladder rankings</h1>
+          <Ranks />
         </a>
+        </div>
+
         <div className="box" href="https://forms.gle/yoUpRaYPc8mnvMBG6">
           <h1>Enter a ladder result</h1>
           <Form
@@ -79,9 +98,9 @@ const Landing = () => {
                 label: "Your name",
               },
               {
-                  id: "entry.891488740",
-                  name : "contact",
-                  label : "Phone number",
+                id: "entry.891488740",
+                name: "contact",
+                label: "Phone number",
               },
               {
                 id: "entry.1262188678",
@@ -97,13 +116,7 @@ const Landing = () => {
             submittedText="Opponent challenged"
           />
         </div>
-        <a
-          className="box"
-          href="https://www.facebook.com/groups/427687110671206"
-        >
-          <h1>Ladder rankings</h1>
-          <Ranks />
-        </a>
+        
       </div>
     </section>
   );

@@ -61,7 +61,7 @@ $white : #f9f9f9;
   .box {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: column;
     flex-grow: 1;
     max-width:100%;
@@ -72,8 +72,24 @@ $white : #f9f9f9;
     color: $red;
     border-radius: 4px;
     text-decoration: none;
-    transition: transform 300ms ease;
+    transition: all 300ms ease;
     cursor: pointer;
+
+    &.red {
+        background:$red;
+        color:white;
+
+
+        &:hover {
+            background:white;
+            color:$red;
+        }
+    }
+
+    &.rank-box {
+        max-height:400px;
+        overflow:scroll;
+    }
 
     @media (max-width:1300px) {
         margin:10px;
