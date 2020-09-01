@@ -2,6 +2,8 @@ import React, { useState } from "react";
 
 import { makeStyles } from "@material-ui/core/styles";
 import { Button, TextField } from "@material-ui/core";
+import Availability from "../../components/Availability";
+import { dates } from "../../data/dates";
 
 const useStyles = makeStyles({
   form: {
@@ -70,21 +72,31 @@ const Form = ({ url, fields, submitText, submittedText }) => {
 
   return (
     <form className={classes.form} onSubmit={handleSubmit}>
-      {fields.map(({ name, label }) => (
-        <TextField
-          className={classes.formField}
-          variant="outlined"
-          label={label}
-          name={name}
-          onChange={handleChange}
-          required
-          InputProps={{
-            classes: {
-              input: classes.input,
-            },
-          }}
-        />
-      ))}
+      {fields.map(({ name, label }) => {
+        if (name === "availability")
+          return (
+            <Availability
+              options={dates}
+              name={name}
+              handleChange={handleChange}
+            />
+          );
+        return (
+          <TextField
+            className={classes.formField}
+            variant="outlined"
+            label={label}
+            name={name}
+            onChange={handleChange}
+            required
+            InputProps={{
+              classes: {
+                input: classes.input,
+              },
+            }}
+          />
+        );
+      })}
 
       <Button
         type="submit"

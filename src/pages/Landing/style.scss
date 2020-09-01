@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
 
 $blue: #1f4689;
 $red: #c43f51;
-$white : #f9f9f9;
+$white: #f9f9f9;
 
 .area {
   min-height: 100vh;
@@ -13,10 +13,19 @@ $white : #f9f9f9;
   justify-content: space-around;
   align-items: center;
   // font-family: "Anton", sans-serif;
-  font-family: 'Russo One', sans-serif;
+  font-family: "Russo One", sans-serif;
 
-  @media (max-width:850px) {
-      flex-direction: column;
+  @media (max-width: 850px) {
+    flex-direction: column;
+  }
+
+  @keyframes logoAnimation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
   }
 
   #bg {
@@ -31,30 +40,51 @@ $white : #f9f9f9;
   .logo {
     width: 200px;
     height: auto;
-    flex-shrink:0;
-    margin-left:40px;
-    margin-top:40px;
-    align-self:flex-start;
+    flex-shrink: 0;
+    align-self: flex-start;
 
-    @media (max-width:1300px) {
-        margin:40px;
-        max-width:calc(100% - 80px);
+    @media (max-width: 1250px) {
+      align-self: center;
+    }
+
+    @media (min-width: 1250px) {
+      animation-name: logoAnimation;
+      animation-duration: 8000ms;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+    }
+  }
+
+  .cta {
+    position: relative;
+
+    @media (max-width: 610px) {
+      width: 100%;
+    }
+  }
+  .margin {
+    margin: 25px;
+
+    @media (max-width: 1300px) {
+      margin: 10px;
     }
   }
 
   .container {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row;
     justify-content: center;
-    width: 1400px;
-    max-width:100%;
+    width: calc(100% - 40px);
+    margin: auto;
+    max-width: 1900px;
 
-    @media (max-width:1300px) {
-        width:auto;
+    @media (max-width: 1250px) {
+      max-width: 600px;
+      flex-direction: column;
     }
 
-    @media (max-width:850px) {
-        padding-bottom: 50px;
+    @media (max-width: 850px) {
+      padding-bottom: 50px;
     }
   }
 
@@ -64,9 +94,8 @@ $white : #f9f9f9;
     justify-content: flex-start;
     flex-direction: column;
     flex-grow: 1;
-    max-width:100%;
+    max-width: 100%;
     background: $white;
-    margin: 25px;
     box-shadow: 0px 2px 3px 4px rgba(83, 78, 78, 0.32);
     padding: 25px;
     color: $red;
@@ -76,33 +105,23 @@ $white : #f9f9f9;
     cursor: pointer;
 
     &.red {
-        background:$red;
-        color:white;
+      background: $red;
+      color: white;
 
-
-        &:hover {
-            background:white;
-            color:$red;
-        }
-    }
-
-    &.rank-box {
-        max-height:400px;
-        overflow:scroll;
-    }
-
-    @media (max-width:1300px) {
-        margin:10px;
+      &:hover {
+        background: white;
+        color: $red;
+      }
     }
 
     h1 {
       font-size: 1.6rem;
       text-align: center;
-      margin:0;
+      margin: 0;
     }
     h5 {
-        margin:0;
-        font-size:1.5rem;
+      margin: 0;
+      font-size: 1.5rem;
     }
   }
 }
