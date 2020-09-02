@@ -50,7 +50,7 @@ const Landing = () => {
 
           <a
             className="box red margin"
-            href="https://www.facebook.com/groups/427687110671206"
+            href="https://goo.gl/maps/jNfKyUBjaJWqzHb67"
           >
             <h5>4 Kentwell Rd, North Manly NSW 2100</h5>
     
@@ -58,7 +58,6 @@ const Landing = () => {
 
           <div
             className="box margin"
-            href="https://forms.gle/yoUpRaYPc8mnvMBG6"
           >
             <h1>Enter a ladder result</h1>
             <Form
@@ -90,7 +89,7 @@ const Landing = () => {
           <Ranks />
         </div>
 
-        <div className="box margin" href="https://forms.gle/yoUpRaYPc8mnvMBG6">
+        <div className="box margin">
           <h1>Challenge someone</h1>
           <Form
             url="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdZGiuxlFoJ9wstQXQNUJrlfY1IXGRgmIsTemN6TVuHFJATTA/formResponse"
