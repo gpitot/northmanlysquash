@@ -5,6 +5,8 @@ $blue: #1f4689;
 $red: #c43f51;
 $white: #f9f9f9;
 
+$verticalBreakpoint: 1450px;
+
 .area {
   min-height: 100vh;
   width: 100%;
@@ -43,11 +45,16 @@ $white: #f9f9f9;
     flex-shrink: 0;
     align-self: flex-start;
 
-    @media (max-width: 1250px) {
-      align-self: center;
+    @media (max-width: 1630px) {
+      width: 100px;
     }
 
-    @media (min-width: 1250px) {
+    @media (max-width: $verticalBreakpoint) {
+      align-self: center;
+      width: 200px;
+    }
+
+    @media (min-width: 1000px) {
       animation-name: logoAnimation;
       animation-duration: 8000ms;
       animation-iteration-count: infinite;
@@ -57,10 +64,16 @@ $white: #f9f9f9;
 
   .cta {
     position: relative;
-
+    flex: 1 1 0;
     @media (max-width: 610px) {
       width: 100%;
     }
+  }
+
+  .rank-box {
+    display: flex;
+    align-items: flex-start;
+    flex: 1 1 0;
   }
   .margin {
     margin: 25px;
@@ -78,7 +91,7 @@ $white: #f9f9f9;
     margin: auto;
     max-width: 1900px;
 
-    @media (max-width: 1250px) {
+    @media (max-width: $verticalBreakpoint) {
       max-width: 600px;
       flex-direction: column;
     }
@@ -93,7 +106,7 @@ $white: #f9f9f9;
     align-items: center;
     justify-content: flex-start;
     flex-direction: column;
-    flex-grow: 1;
+    flex: 1 1 0;
     max-width: 100%;
     background: $white;
     box-shadow: 0px 2px 3px 4px rgba(83, 78, 78, 0.32);

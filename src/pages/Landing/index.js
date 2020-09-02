@@ -45,13 +45,15 @@ const Landing = () => {
             href="https://www.facebook.com/groups/427687110671206"
           >
             <h1>Follow us on Facebook</h1>
+ 
           </a>
 
           <a
             className="box red margin"
-            href="https://goo.gl/maps/mpx5FTxA9Gx6taEA6"
+            href="https://www.facebook.com/groups/427687110671206"
           >
             <h5>4 Kentwell Rd, North Manly NSW 2100</h5>
+    
           </a>
 
           <div
