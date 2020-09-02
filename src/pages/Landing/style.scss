@@ -5,12 +5,13 @@ $blue: #1f4689;
 $red: #c43f51;
 $white: #f9f9f9;
 
-$verticalBreakpoint: 1450px;
+$verticalBreakpoint: 1050px;
 
 .area {
   min-height: 100vh;
   width: 100%;
-
+  max-width: 1900px;
+  margin: auto;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -62,12 +63,9 @@ $verticalBreakpoint: 1450px;
     }
   }
 
-  .cta {
+  .col {
     position: relative;
     flex: 1 1 0;
-    @media (max-width: 610px) {
-      width: 100%;
-    }
   }
 
   .rank-box {
@@ -98,6 +96,10 @@ $verticalBreakpoint: 1450px;
 
     @media (max-width: 850px) {
       padding-bottom: 50px;
+    }
+
+    @media (max-width: 450px) {
+      width: calc(100% - 20px);
     }
   }
 
@@ -130,10 +132,11 @@ $verticalBreakpoint: 1450px;
     h1 {
       font-size: 1.6rem;
       text-align: center;
-      margin: 0;
+      margin: 0 26px;
     }
     h5 {
       margin: 0;
+      text-align: center;
       font-size: 1rem;
     }
   }
