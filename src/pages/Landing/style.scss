@@ -10,6 +10,8 @@ $verticalBreakpoint: 1450px;
 .area {
   min-height: 100vh;
   width: 100%;
+  max-width: 1900px;
+  margin: auto;
 
   display: flex;
   justify-content: space-around;
@@ -65,9 +67,6 @@ $verticalBreakpoint: 1450px;
   .cta {
     position: relative;
     flex: 1 1 0;
-    @media (max-width: 610px) {
-      width: 100%;
-    }
   }
 
   .rank-box {
@@ -98,6 +97,10 @@ $verticalBreakpoint: 1450px;
 
     @media (max-width: 850px) {
       padding-bottom: 50px;
+    }
+
+    @media (max-width: 450px) {
+      width: calc(100% - 20px);
     }
   }
 
@@ -135,6 +138,7 @@ $verticalBreakpoint: 1450px;
     h5 {
       margin: 0;
       font-size: 1rem;
+      text-align: center;
     }
   }
 }
