@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+
+$blue: #1f4689;
+$red: #c43f51;
+$white: #f9f9f9;
+
+$verticalBreakpoint: 1450px;
+
+.area {
+  min-height: 100vh;
+  width: 100%;
+  max-width: 1900px;
+  margin: auto;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  // font-family: "Anton", sans-serif;
+  font-family: "Russo One", sans-serif;
+
+  @media (max-width: 850px) {
+    flex-direction: column;
+  }
+
+  @keyframes logoAnimation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  #bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  .logo {
+    width: 200px;
+    height: auto;
+    flex-shrink: 0;
+    align-self: flex-start;
+
+    @media (max-width: 1630px) {
+      width: 100px;
+    }
+
+    @media (max-width: $verticalBreakpoint) {
+      align-self: center;
+      width: 200px;
+    }
+
+    @media (min-width: 1000px) {
+      animation-name: logoAnimation;
+      animation-duration: 8000ms;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+    }
+  }
+}
+
+.margin {
+  margin: 25px;
+
+  @media (max-width: 1300px) {
+    margin: 10px;
+  }
+}
+
+.container {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  width: calc(100% - 40px);
+  margin: 0 auto;
+  max-width: 1900px;
+
+  @media (max-width: $verticalBreakpoint) {
+    max-width: 600px;
+    flex-direction: column;
+  }
+
+  @media (max-width: 850px) {
+    padding-bottom: 50px;
+  }
+
+  @media (max-width: 450px) {
+    width: calc(100% - 20px);
+  }
+}

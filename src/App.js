@@ -1,10 +1,11 @@
 import React from "react";
-import Landing from "./pages/Landing";
 import Theme from "./Theme";
+import Routes from "./Routes";
+
 function App() {
   return (
     <Theme>
-      <Landing />
+      <Routes />
     </Theme>
   );
 }
