@@ -1,5 +1,4 @@
 import React from "react";
-import Base from "../Base";
 import "./style.scss";
 import { Link } from "react-router-dom";
 
