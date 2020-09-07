@@ -18,9 +18,6 @@ $verticalBreakpoint: 1450px;
   flex: 1 1 0;
 }
 
-
-
-
 .box {
   position: relative;
   display: flex;
@@ -51,7 +48,7 @@ $verticalBreakpoint: 1450px;
   h1 {
     font-size: 1.6rem;
     text-align: center;
-    margin: 0;
+    margin: 0 35px;
   }
   h5 {
     margin: 0;
