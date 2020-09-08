@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Rules = () => (
   <>
     <div className="rules ">
-      <div className="box">
+      <div className="box margin">
         <h1>Rules of ladder league</h1>
         <ul>
           <li>You can challenge a player up to 5 ranks above you.</li>
@@ -39,7 +39,7 @@ const Rules = () => (
         </ul>
       </div>
 
-      <Link className="box red" to="/">
+      <Link className="box red margin" to="/">
         <h1>Challenge a player</h1>
       </Link>
     </div>
