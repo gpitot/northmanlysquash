@@ -19,17 +19,19 @@ const Landing = () => {
           className="box red margin"
           href="https://www.facebook.com/groups/427687110671206"
         >
-          <h1>Follow us on Facebook</h1>
+          <h5>Follow us on Facebook</h5>
         </a>
-        <Link to="/rules" className="box red margin">
-          <h5>Ladder League Rules</h5>
-        </Link>
+
         <a
           className="box red margin"
           href="https://goo.gl/maps/jNfKyUBjaJWqzHb67"
         >
-          <h5>4 Kentwell Rd, North Manly NSW 2100</h5>
+          <h5>4 Kentwell Rd, North Manly</h5>
         </a>
+
+        <Link to="/rules" className="box red margin">
+          <h5>Ladder League Rules</h5>
+        </Link>
 
         <div className="box margin">
           <h1>Enter a ladder result</h1>
