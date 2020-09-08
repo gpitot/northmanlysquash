@@ -47,6 +47,10 @@ $verticalBreakpoint: 1450px;
     flex-shrink: 0;
     align-self: flex-start;
 
+    img {
+      width: 100%;
+    }
+
     @media (max-width: 1630px) {
       width: 100px;
     }

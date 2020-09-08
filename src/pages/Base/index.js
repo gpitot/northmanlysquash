@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import "./style.scss";
+import { Link } from "react-router-dom";
 
 const Landing = ({ children }) => {
   const canvasEl = useRef(null);
@@ -30,7 +31,9 @@ const Landing = ({ children }) => {
       <canvas id="bg" ref={canvasEl}></canvas>
 
       <div className="container">
-        <img className="logo margin" src="/logo-white.png" alt="North Manly Squash Club" />
+        <Link to="/" className="logo margin">
+          <img src="/logo-white.png" alt="North Manly Squash Club" />
+        </Link>
         <>{children}</>
       </div>
     </section>
