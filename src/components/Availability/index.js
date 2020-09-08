@@ -19,15 +19,18 @@ const Availability = (props) => {
     });
   };
   return (
-    <Select
-      className="availability-select"
-      options={props.options}
-      isMulti
-      isSearchable={true}
-      placeholder="Select availability"
-      components={{ Group }}
-      onChange={handleChange}
-    />
+    <>
+      <label>Select as many availabilities as possible</label>
+      <Select
+        className="availability-select"
+        options={props.options}
+        isMulti
+        isSearchable={true}
+        placeholder="Select availabilities"
+        components={{ Group }}
+        onChange={handleChange}
+      />
+    </>
   );
 };
 
