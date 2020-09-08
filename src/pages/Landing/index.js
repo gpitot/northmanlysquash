@@ -5,7 +5,6 @@ import Form from "../Form";
 import Information from "../../components/Information";
 import { Link } from "react-router-dom";
 
-
 const Landing = () => {
   return (
     <>
@@ -22,7 +21,9 @@ const Landing = () => {
         >
           <h1>Follow us on Facebook</h1>
         </a>
-
+        <Link to="/rules" className="box red margin">
+          <h5>Ladder League Rules</h5>
+        </Link>
         <a
           className="box red margin"
           href="https://goo.gl/maps/jNfKyUBjaJWqzHb67"
