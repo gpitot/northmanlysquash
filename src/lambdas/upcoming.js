@@ -1,23 +1,21 @@
 const { GoogleSpreadsheet } = require("google-spreadsheet");
 
-const { SHEET, RANKS_ID, KEY } = require("./config");
+const { SHEET, UPCOMING_ID, KEY } = require("./config");
 
 exports.handler = async (event, context) => {
   const ranksDoc = new GoogleSpreadsheet(SHEET);
   ranksDoc.useApiKey(KEY);
   await ranksDoc.loadInfo();
-  const sheet = ranksDoc.sheetsById[RANKS_ID];
+  const sheet = ranksDoc.sheetsById[UPCOMING_ID];
   const rows = await sheet.getRows({
     limit: 40,
   }); // can pass in { limit, offset }
-  const ranks = rows.map(({ Name, Points, Win, Loss }) => [
-    Name,
-    Points,
-    Win,
-    Loss,
-  ]);
+  const upcoming = rows.map((row) => {
+    return [row["Challenger Name"], row["Opponent Name"], row["Status"]];
+  });
+
   return {
     status: 200,
-    body: JSON.stringify(ranks),
+    body: JSON.stringify(upcoming),
   };
 };
