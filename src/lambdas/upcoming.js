@@ -18,7 +18,7 @@ exports.handler = async (event, context) => {
     }
     let date = row["Date"];
     if (date) {
-      date = moment(date, "DD.MM.YYYY.hh.mm");
+      date = moment(date, "DD.MM.YYYY.HH.mm");
       console.log(date);
     }
     return [
@@ -36,7 +36,7 @@ exports.handler = async (event, context) => {
   const sortedBooked = booked.sort((a, b) => a[3] - b[3]);
   const bookedWithReadableDate = sortedBooked.map((booking) => {
     const formatted = booking;
-    formatted[3] = formatted[3].format("DD/MM/YYYY hh:mm");
+    formatted[3] = formatted[3].format("DD/MM/YYYY HH:mm");
     return formatted;
   });
   return {
