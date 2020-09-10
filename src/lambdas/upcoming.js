@@ -34,9 +34,11 @@ exports.handler = async (event, context) => {
   const pending = upcoming.filter((row) => row[2] === "pending");
 
   const sortedBooked = booked.sort((a, b) => a[3] - b[3]);
-  const bookedWithReadableDate = sortedBooked.map((booking) =>
-    booking[3].format("DD/MM/YYYY hh:mm")
-  );
+  const bookedWithReadableDate = sortedBooked.map((booking) => {
+    const formatted = booking;
+    formatted[3] = formatted[3].format("DD/MM/YYYY hh:mm");
+    return formatted;
+  });
   return {
     status: 200,
     body: JSON.stringify([...bookedWithReadableDate, ...pending]),

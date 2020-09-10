@@ -18,9 +18,9 @@ const Upcoming = () => {
         <table className="ranks">
           <thead>
             <tr>
+              <th>Status</th>
               <th>Challenger</th>
               <th>Opponent</th>
-              <th>Status</th>
               <th>Date</th>
               <th>Court</th>
             </tr>
@@ -29,9 +29,9 @@ const Upcoming = () => {
             {upcoming.map(
               ([Challenger, Opponent, Status, Date, Court], idx) => (
                 <tr key={idx}>
+                  <td className={Status}>{Status.toUpperCase()}</td>
                   <td>{Challenger}</td>
                   <td>{Opponent}</td>
-                  <td className={Status}>{Status.toUpperCase()}</td>
                   <td>{Date}</td>
                   <td>{Court}</td>
                 </tr>
