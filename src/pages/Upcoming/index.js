@@ -22,19 +22,17 @@ const Upcoming = () => {
               <th>Opponent</th>
               <th>Status</th>
               <th>Date</th>
-              <th>Time</th>
               <th>Court</th>
             </tr>
           </thead>
           <tbody>
             {upcoming.map(
-              ([Challenger, Opponent, Status, Date, Time, Court], idx) => (
+              ([Challenger, Opponent, Status, Date, Court], idx) => (
                 <tr key={idx}>
                   <td>{Challenger}</td>
                   <td>{Opponent}</td>
                   <td className={Status}>{Status.toUpperCase()}</td>
                   <td>{Date}</td>
-                  <td>{Time}</td>
                   <td>{Court}</td>
                 </tr>
               )
