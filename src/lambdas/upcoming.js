@@ -12,7 +12,10 @@ exports.handler = async (event, context) => {
   }); // can pass in { limit, offset }
   const upcoming = rows
     .map((row) => {
-      const status = row["Status"].toLowerCase();
+      let status = row["Status"];
+      if (status) {
+        status = status.toLowerCase();
+      }
       return [
         row["Challenger Name"],
         row["Opponent Name"],
