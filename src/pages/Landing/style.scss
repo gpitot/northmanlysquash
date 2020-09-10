@@ -17,3 +17,19 @@ $verticalBreakpoint: 1450px;
   align-items: flex-start;
   flex: 1 1 0;
 }
+
+.container .full-width {
+  flex: 0 1 calc(100% - 300px);
+
+  @media (min-width: $verticalBreakpoint + 1) {
+    margin-left: auto;
+  }
+
+  @media (max-width: 1630px) {
+    flex: 0 1 calc(100% - 200px);
+  }
+
+  @media (max-width: $verticalBreakpoint) {
+    flex: 1 1 auto;
+  }
+}

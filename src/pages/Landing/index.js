@@ -4,6 +4,7 @@ import Ranks from "../Ranks";
 import Form from "../Form";
 import Information from "../../components/Information";
 import { Link } from "react-router-dom";
+import Upcoming from "../Upcoming";
 
 const Landing = () => {
   return (
@@ -97,6 +98,10 @@ const Landing = () => {
           ]}
           submittedText="Opponent challenged"
         />
+      </div>
+
+      <div className="box margin full-width">
+        <Upcoming />
       </div>
     </>
   );

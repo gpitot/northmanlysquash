@@ -79,7 +79,7 @@ $verticalBreakpoint: 1450px;
 
 .container {
   display: flex;
-  flex-flow: row;
+  flex-flow: row wrap;
   justify-content: center;
   width: calc(100% - 40px);
   margin: 0 auto;
