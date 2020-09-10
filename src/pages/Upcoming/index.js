@@ -32,7 +32,7 @@ const Upcoming = () => {
                 <tr key={idx}>
                   <td>{Challenger}</td>
                   <td>{Opponent}</td>
-                  <td className={Status}>{Status}</td>
+                  <td className={Status}>{Status.toUpperCase()}</td>
                   <td>{Date}</td>
                   <td>{Time}</td>
                   <td>{Court}</td>

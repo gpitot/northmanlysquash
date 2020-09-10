@@ -6,7 +6,6 @@ const Ranks = () => {
   const [ranks, setRanks] = useState([]);
   const [loading, setLoading] = useState(true);
   useEffect(() => {
-    console.log("fetch ranks");
     fetch("/.netlify/functions/ranks")
       .then((res) => res.json())
       .then((data) => {
