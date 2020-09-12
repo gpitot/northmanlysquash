@@ -31,8 +31,7 @@ exports.handler = async (event, context) => {
   });
   const currentTime = moment.tz(new Date(), "Australia/Sydney").add(1, "hours");
   const booked = upcoming.filter(
-    (row) =>
-      row[2] === "booked" && moment(row[3], "DD/MM/YYYY HH:mm") > currentTime
+    (row) => row[2] === "booked" && row[3] > currentTime
   );
   const pending = upcoming.filter((row) => row[2] === "pending");
 
@@ -44,6 +43,6 @@ exports.handler = async (event, context) => {
   });
   return {
     status: 200,
-    body: currentTime.format("DD/MM/YYYY HH:mm"),
+    body: JSON.stringify([...pending, ...bookedWithReadableDate]),
   };
 };
