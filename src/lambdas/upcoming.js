@@ -29,7 +29,7 @@ exports.handler = async (event, context) => {
       row["Court"],
     ];
   });
-  const currentTime = moment().add(1, "hours");
+  const currentTime = moment.tz(new Date(), "Australia/Sydney").add(1, "hours");
   const booked = upcoming.filter(
     (row) =>
       row[2] === "booked" && moment(row[3], "DD/MM/YYYY HH:mm") > currentTime
