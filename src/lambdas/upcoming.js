@@ -43,6 +43,6 @@ exports.handler = async (event, context) => {
   });
   return {
     status: 200,
-    body: JSON.stringify([...pending, ...bookedWithReadableDate]),
+    body: JSON.stringify([...bookedWithReadableDate, ...pending]),
   };
 };
