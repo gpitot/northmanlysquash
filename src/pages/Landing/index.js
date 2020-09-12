@@ -5,6 +5,7 @@ import Form from "../Form";
 import Information from "../../components/Information";
 import { Link } from "react-router-dom";
 import Upcoming from "../Upcoming";
+import History from "../History";
 
 const Landing = () => {
   return (
@@ -102,6 +103,10 @@ const Landing = () => {
 
       <div className="box margin full-width">
         <Upcoming />
+      </div>
+
+      <div className="box margin full-width">
+        <History />
       </div>
     </>
   );
