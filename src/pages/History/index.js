@@ -11,6 +11,8 @@ const History = () => {
       .catch((err) => console.log(err));
   }, []);
 
+  const resultClassName = (score) => (score === "3" ? "winner" : "loser");
+
   return (
     <>
       <h1>Match history</h1>
@@ -24,13 +26,17 @@ const History = () => {
             </tr>
           </thead>
           <tbody>
-            {history.map(([Challenger, Opponent, Result], idx) => (
-              <tr key={idx}>
-                <td>{Challenger}</td>
-                <td>{Opponent}</td>
-                <td>{Result}</td>
-              </tr>
-            ))}
+            {history.map(([challenger, opponent, result], idx) => {
+              const scores = result.split("-");
+
+              return (
+                <tr key={idx}>
+                  <td className={resultClassName(scores[0])}>{challenger}</td>
+                  <td className={resultClassName(scores[1])}>{opponent}</td>
+                  <td>{result}</td>
+                </tr>
+              );
+            })}
           </tbody>
         </table>
       </div>
