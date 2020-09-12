@@ -12,11 +12,13 @@ $blue: #1f4689;
     padding: 16px 32px;
     text-align: center;
 
-    &.pending {
+    &.pending,
+    &.loser {
       background: orange;
     }
 
-    &.booked {
+    &.booked,
+    &.winner {
       background: lightgreen;
     }
   }
