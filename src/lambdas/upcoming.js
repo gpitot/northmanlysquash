@@ -1,5 +1,5 @@
 const { GoogleSpreadsheet } = require("google-spreadsheet");
-const moment = require("moment");
+const moment = require("moment-timezone");
 
 const { SHEET, UPCOMING_ID, KEY } = require("./config");
 
