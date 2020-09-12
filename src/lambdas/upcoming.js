@@ -44,6 +44,6 @@ exports.handler = async (event, context) => {
   });
   return {
     status: 200,
-    body: JSON.stringify([...bookedWithReadableDate, ...pending]),
+    body: currentTime.format("DD/MM/YYYY HH:mm"),
   };
 };
