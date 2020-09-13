@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./style.scss";
 import fakeRanks from "./ranks";
+import Streak from "../../components/Streak";
 
 const Ranks = () => {
   const [ranks, setRanks] = useState([]);
@@ -24,19 +25,17 @@ const Ranks = () => {
           <tr>
             <th>Rank</th>
             <th>Player</th>
-            <th>Points</th>
-            <th>Win</th>
-            <th>Loss</th>
           </tr>
         </thead>
         <tbody className={loading && "loading"}>
-          {displayedRanks.map(([name, points, win, loss], idx) => (
+          {displayedRanks.map(([name, streak], idx) => (
             <tr key={idx}>
-              <td>{idx + 1}</td>
+              <td className="rank-streak">
+                {idx + 1}
+
+                <Streak streak={streak} />
+              </td>
               <td>{name}</td>
-              <td>{points}</td>
-              <td>{win}</td>
-              <td>{loss}</td>
             </tr>
           ))}
         </tbody>

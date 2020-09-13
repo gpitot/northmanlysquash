@@ -10,12 +10,7 @@ exports.handler = async (event, context) => {
   const rows = await sheet.getRows({
     limit: 40,
   }); // can pass in { limit, offset }
-  const ranks = rows.map(({ Name, Points, Win, Loss }) => [
-    Name,
-    Points,
-    Win,
-    Loss,
-  ]);
+  const ranks = rows.map(({ Name, Streak }) => [Name, Streak]);
   return {
     status: 200,
     body: JSON.stringify(ranks),
