@@ -4,7 +4,6 @@ import { makeStyles } from "@material-ui/core/styles";
 import { Button, TextField } from "@material-ui/core";
 import Availability from "../../components/Availability";
 import { dates } from "../../data/dates";
-import { fakeEncrypt } from "../../utils/fake-encrypt";
 
 const useStyles = makeStyles({
   form: {

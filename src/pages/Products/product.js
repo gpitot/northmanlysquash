@@ -7,7 +7,7 @@ const Product = ({ product }) => {
   if (!buying)
     return (
       <div className="product">
-        <img src={`products/${img}`} />
+        <img src={`products/${img}`} alt={name} />
         <div className="description">
           <h2>{name}</h2>
           <h5>${cost}</h5>
