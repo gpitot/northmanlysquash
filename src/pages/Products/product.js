@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { fakeEncrypt } from "../../utils/fake-encrypt";
 import Form from "../Form";
 const Product = ({ product }) => {
   const [buying, setBuying] = useState(false);
@@ -38,8 +39,11 @@ const Product = ({ product }) => {
             hidden: true,
           },
         ]}
-        submittedText="Product purchased. "
-        overrides={[["entry.1438723422", () => name]]}
+        submittedText="Product purchased. We will contact you with details"
+        overrides={[
+          ["entry.1953116764", fakeEncrypt],
+          ["entry.1438723422", () => name],
+        ]}
       />
     </div>
   );
