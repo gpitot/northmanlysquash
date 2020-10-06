@@ -3,13 +3,15 @@ import { fakeEncrypt } from "../../utils/fake-encrypt";
 import Form from "../Form";
 const Product = ({ product }) => {
   const [buying, setBuying] = useState(false);
-  const [img, name, cost] = product;
+  const [img, name, cost, size, weight] = product;
   if (!buying)
     return (
       <div className="product">
         <img src={`products/${img}`} alt={name} />
         <div className="description">
           <h2>{name}</h2>
+          {size && <p>Head size: {size}cm&sup2;</p>}
+          {weight && <p>Weight: {weight}</p>}
           <h5>${cost}</h5>
           <button className="buy" onClick={() => setBuying(true)}>
             <h5>BUY NOW</h5>
