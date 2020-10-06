@@ -12,10 +12,12 @@ const Product = ({ product }) => {
           <h2>{name}</h2>
           {size && <p>Head size: {size}cm&sup2;</p>}
           {weight && <p>Weight: {weight}</p>}
-          <h5>${cost}</h5>
-          <button className="buy" onClick={() => setBuying(true)}>
+          <div className="product-tag">
+            <h5>${cost}</h5>
+          </div>
+          <div className="product-tag buy" onClick={() => setBuying(true)}>
             <h5>BUY NOW</h5>
-          </button>
+          </div>
         </div>
       </div>
     );

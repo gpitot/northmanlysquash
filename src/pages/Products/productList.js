@@ -1,6 +1,6 @@
 export default [
   ["aggressor.webp", "Aggressor Squash Racquet ", 199, "490", "125gm"],
-  ["assault.webp", "Assault Squash Racquet", 180, "500", "125gm"],
+  ["assault.webp", "Assault Squash Racquet", 199, "500", "125gm"],
   ["hornet.webp", "Hornet Squash Racquet", 190, "480", "130gm"],
   ["stealth.webp", "Stealth Squash Racquet", 199, "490", "125gm"],
   ["theboss.webp", "The Boss Squash Racquet", 190, "490", "130gm"],
