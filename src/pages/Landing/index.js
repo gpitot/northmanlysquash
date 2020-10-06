@@ -6,6 +6,8 @@ import Information from "../../components/Information";
 import { Link } from "react-router-dom";
 import Upcoming from "../Upcoming";
 import History from "../History";
+import Products from "../Products";
+import { fakeEncrypt } from "../../utils/fake-encrypt";
 
 const Landing = () => {
   return (
@@ -98,6 +100,7 @@ const Landing = () => {
             },
           ]}
           submittedText="Opponent challenged"
+          overrides={[["entry.891488740", fakeEncrypt]]}
         />
       </div>
 
@@ -108,6 +111,8 @@ const Landing = () => {
       <div className="box margin full-width">
         <History />
       </div>
+
+      <Products />
     </>
   );
 };

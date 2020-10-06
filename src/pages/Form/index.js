@@ -41,7 +41,7 @@ const useStyles = makeStyles({
   },
 });
 
-const Form = ({ url, fields, submitText, submittedText }) => {
+const Form = ({ url, fields, submitText, submittedText, overrides = [] }) => {
   const DEFAULT_STATE = {};
   fields.forEach(({ name }) => (DEFAULT_STATE[name] = ""));
 
@@ -61,10 +61,17 @@ const Form = ({ url, fields, submitText, submittedText }) => {
 
     const data = new FormData();
     fields.forEach(({ id, name }) => {
-      if (id === "entry.891488740") {
-        //encrypt numberr
-        data.append(id, fakeEncrypt(formData[name]));
-      } else {
+      let overrided = false;
+      for (let i = 0; i < overrides.length; i += 1) {
+        const [oId, cb] = overrides[i];
+        if (id === oId) {
+          overrided = true;
+          data.append(id, cb(formData[name]));
+          break;
+        }
+      }
+
+      if (!overrided) {
         data.append(id, formData[name]);
       }
     });
@@ -78,7 +85,8 @@ const Form = ({ url, fields, submitText, submittedText }) => {
 
   return (
     <form className={classes.form} onSubmit={handleSubmit}>
-      {fields.map(({ name, label }) => {
+      {fields.map(({ name, label, hidden = false }) => {
+        if (hidden) return null;
         if (name === "availability")
           return (
             <Availability
