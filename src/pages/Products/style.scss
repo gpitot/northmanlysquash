@@ -31,8 +31,7 @@
       margin: 0;
     }
 
-    h5 {
-      background: #c43f51;
+    .product-tag {
       display: inline-block;
       padding: 8px;
       border-radius: 4px;
@@ -41,16 +40,16 @@
       color: white;
       cursor: pointer;
       margin-top: 8px;
+      background: #c43f51;
     }
 
     .buy {
       background: #1f4689;
       border: none;
-      border-radius: 4px;
-      margin-top: 8px;
-      h5 {
-        margin-top: 0;
-        background: #1f4689;
+      outline: none;
+
+      &:hover {
+        background: #c43f51;
       }
     }
 
