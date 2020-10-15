@@ -52,19 +52,19 @@ const Social = () => {
     <section className="social">
       <Registered
         heading={"Coaching List"}
-        registered={registered.filter(([, e]) => e === "coaching")}
+        registeredUsers={registered.filter(([, e]) => e === "coaching")}
         spaces={9}
         registerForm={coachingRegisterForm}
       />
       <Registered
         heading={"Social 7-830pm"}
-        registered={registered.filter(([, e]) => e === "social7pm")}
+        registeredUsers={registered.filter(([, e]) => e === "social7pm")}
         spaces={9}
         registerForm={socialEarlyRegisterForm}
       />
       <Registered
         heading={"Social 830-10pm"}
-        registered={registered.filter(([, e]) => e === "social830pm")}
+        registeredUsers={registered.filter(([, e]) => e === "social830pm")}
         spaces={9}
         registerForm={socialLateRegisterForm}
       />

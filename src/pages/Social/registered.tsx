@@ -2,42 +2,44 @@ import React from "react";
 import Register, { IRegister } from "./register";
 import "./style.scss";
 
-type PlayerType = [string, string, string];
+type PlayerType = any;
 interface IRegistered {
   heading: string;
-  registered: Array<PlayerType>;
+  registeredUsers: Array<PlayerType>;
   spaces: number;
   registerForm: IRegister;
 }
 
 const Registered = ({
   heading,
-  registered,
+  registeredUsers,
   spaces,
   registerForm,
-}: IRegistered) => (
-  <div className="box margin">
-    <table className="ranks">
-      <thead>
-        <tr>
-          <th>{heading}</th>
-        </tr>
-      </thead>
-      <tbody>
-        {registered.map(([date, event, player]) => (
+}: IRegistered) => {
+  return (
+    <div className="box margin">
+      <table className="ranks">
+        <thead>
           <tr>
-            <td>{player}</td>
+            <th>{heading}</th>
           </tr>
-        ))}
-        {registered.length < spaces && (
-          <tr>
-            <td>
-              <Register {...registerForm} />
-            </td>
-          </tr>
-        )}
-      </tbody>
-    </table>
-  </div>
-);
+        </thead>
+        <tbody>
+          {registeredUsers.map(([date, event, player]) => (
+            <tr>
+              <td>{player}</td>
+            </tr>
+          ))}
+          {registeredUsers.length < spaces && (
+            <tr>
+              <td>
+                <Register {...registerForm} />
+              </td>
+            </tr>
+          )}
+        </tbody>
+      </table>
+    </div>
+  );
+};
 export default Registered;
