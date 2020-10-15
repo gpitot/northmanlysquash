@@ -2,9 +2,10 @@ import React from "react";
 import Register, { IRegister } from "./register";
 import "./style.scss";
 
+type PlayerType = [string, string, string];
 interface IRegistered {
   heading: string;
-  registered: Array<string>;
+  registered: Array<PlayerType>;
   spaces: number;
   registerForm: IRegister;
 }
@@ -23,7 +24,7 @@ const Registered = ({
         </tr>
       </thead>
       <tbody>
-        {registered.map((player) => (
+        {registered.map(([date, event, player]) => (
           <tr>
             <td>{player}</td>
           </tr>
