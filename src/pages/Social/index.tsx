@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Registered from "./registered";
 import "./style.scss";
 
@@ -37,23 +37,34 @@ const Social = () => {
   const socialEarlyRegisterForm = generateForm("social7pm");
   const socialLateRegisterForm = generateForm("social830pm");
 
+  const [registered, setRegistered] = useState([]);
+
+  useEffect(() => {
+    fetch("/.netlify/functions/social")
+      .then((res) => res.json())
+      .then((data) => {
+        setRegistered(data);
+      })
+      .catch((err) => console.log(err));
+  }, []);
+
   return (
     <section className="social">
       <Registered
         heading={"Coaching List"}
-        registered={[]}
+        registered={registered.filter(([, e]) => e === "coaching")}
         spaces={9}
         registerForm={coachingRegisterForm}
       />
       <Registered
         heading={"Social 7-830pm"}
-        registered={[]}
+        registered={registered.filter(([, e]) => e === "social7pm")}
         spaces={9}
         registerForm={socialEarlyRegisterForm}
       />
       <Registered
         heading={"Social 830-10pm"}
-        registered={[]}
+        registered={registered.filter(([, e]) => e === "social830pm")}
         spaces={9}
         registerForm={socialLateRegisterForm}
       />
