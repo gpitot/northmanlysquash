@@ -19,7 +19,6 @@ exports.handler = async (event, context) => {
     let date = row["Date"];
     if (date) {
       date = moment(date, "DD.MM.YYYY.HH.mm");
-      console.log(date);
     }
     return [
       row["Challenger Name"],

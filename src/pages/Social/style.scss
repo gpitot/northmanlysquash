@@ -1,0 +1,10 @@
+.social {
+  flex-grow: 1;
+  display: flex;
+
+  .event {
+    width: 300px;
+    padding: 16px;
+    background: white;
+  }
+}
