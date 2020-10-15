@@ -20,7 +20,7 @@ exports.handler = async () => {
 
   //get any results since tuesday morning
   let time = moment
-    .tz(new Date("10/20/2020"), "Australia/Sydney")
+    .tz(new Date(), "Australia/Sydney")
     .add(1, "hours");
   let currentDay = time.isoWeekday();
   while (currentDay !== 1) {
