@@ -1,0 +1,14 @@
+.social {
+  flex-grow: 1;
+  display: flex;
+
+  @media (max-width: 1450px) {
+    flex-direction: column;
+  }
+
+  .event {
+    width: 300px;
+    padding: 16px;
+    background: white;
+  }
+}
