@@ -8,6 +8,7 @@ interface IRegistered {
   registeredUsers: Array<PlayerType>;
   spaces: number;
   registerForm: IRegister;
+  loading: boolean;
 }
 
 const Registered = ({
@@ -15,7 +16,27 @@ const Registered = ({
   registeredUsers,
   spaces,
   registerForm,
+  loading,
 }: IRegistered) => {
+  if (loading) {
+    return (
+      <div className="box margin">
+        <table className="ranks">
+          <thead>
+            <tr>
+              <th>{heading}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Loading...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    );
+  }
+
   return (
     <div className="box margin">
       <table className="ranks">
@@ -25,7 +46,10 @@ const Registered = ({
           </tr>
         </thead>
         <tbody>
-          {registeredUsers.map(([date, event, player]) => (
+          <tr>
+            <td>{spaces - registeredUsers.length} spots left.</td>
+          </tr>
+          {registeredUsers.slice(0, spaces).map(([date, event, player]) => (
             <tr>
               <td>{player}</td>
             </tr>

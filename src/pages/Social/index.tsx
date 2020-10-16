@@ -38,12 +38,14 @@ const Social = () => {
   const socialLateRegisterForm = generateForm("social830pm");
 
   const [registered, setRegistered] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     fetch("/.netlify/functions/social")
       .then((res) => res.json())
       .then((data) => {
         setRegistered(data);
+        setLoading(false);
       })
       .catch((err) => console.log(err));
   }, []);
@@ -55,18 +57,21 @@ const Social = () => {
         registeredUsers={registered.filter(([, e]) => e === "coaching")}
         spaces={9}
         registerForm={coachingRegisterForm}
+        loading={loading}
       />
       <Registered
         heading={"Social 7-830pm"}
         registeredUsers={registered.filter(([, e]) => e === "social7pm")}
         spaces={9}
         registerForm={socialEarlyRegisterForm}
+        loading={loading}
       />
       <Registered
         heading={"Social 830-10pm"}
         registeredUsers={registered.filter(([, e]) => e === "social830pm")}
         spaces={9}
         registerForm={socialLateRegisterForm}
+        loading={loading}
       />
     </section>
   );
