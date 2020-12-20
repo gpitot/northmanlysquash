@@ -55,7 +55,7 @@ const Social = () => {
       <Registered
         heading={"Coaching List"}
         registeredUsers={registered.filter(([, e]) => e === "coaching")}
-        spaces={9}
+        spaces={8}
         registerForm={coachingRegisterForm}
         loading={loading}
       />
