@@ -52,7 +52,19 @@ const Social = () => {
 
   return (
     <section className="social">
-      <Registered
+      <div className="booking-system-test">
+        <h2>Monday night coaching and sessions are now bookable here:</h2>
+        <h2>
+          <a href="https://northmanlysquashwrc.simplybook.me/v2/#book">
+            Book here
+          </a>
+        </h2>
+        <h2>
+          We are trialing a new booking system and appreciate any feedback you
+          might have about the experience.
+        </h2>
+      </div>
+      {/* <Registered
         heading={"Coaching List"}
         registeredUsers={registered.filter(([, e]) => e === "coaching")}
         spaces={8}
@@ -72,7 +84,7 @@ const Social = () => {
         spaces={9}
         registerForm={socialLateRegisterForm}
         loading={loading}
-      />
+      /> */}
     </section>
   );
 };
